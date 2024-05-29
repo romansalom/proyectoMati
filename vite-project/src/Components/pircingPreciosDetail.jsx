@@ -2,8 +2,6 @@ import '../App.css';
 export const PrincingPriceDetail = () => {
   return (
     <div className="contenedores-zoom max-w-6xl mx-auto font-sans text-[#333] shadow-[0_4px_60px_-4px_rgba(93,96,127,0.6)] rounded-3xl">
-      <br></br>
-
       <div className="overflow-x-auto mt-5">
         <table className="w-full border border-collapse min-w-[980px]">
           <thead>
@@ -34,16 +32,16 @@ export const PrincingPriceDetail = () => {
               <td className="px-4 py-3 border max-w-[150px] text-lg font-bold">
                 Number of Users
               </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
+              <td className="px-4 py-3 text-center border font-bold max-w-[150px]">
                 20 Pages
               </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
+              <td className="px-4 py-3 text-center font-bold border max-w-[150px]">
                 600 Pages
                 <p className="text-xs text-gray-400 font-medium mt-1">
                   Pages Add-ons on Demand
                 </p>
               </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
+              <td className="px-4 py-3  text-center border font-bold max-w-[150px]">
                 Unlimited
                 <p className="text-xs text-gray-400 font-medium mt-1">
                   Pages Add-ons on Demand
@@ -54,13 +52,13 @@ export const PrincingPriceDetail = () => {
               <td className="px-4 py-3 border max-w-[150px] text-lg font-bold">
                 Users Per Page
               </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
+              <td className="px-4 py-3 font-bold text-center border max-w-[150px]">
                 5 Pages
               </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
+              <td className="px-4 py-3 font-bold text-center border max-w-[150px]">
                 50 Pages
               </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
+              <td className="px-4 py-3 font-bold text-center border max-w-[150px]">
                 Unlimited
                 <p className="text-xs text-gray-400 font-medium mt-1">
                   Pages Add-ons on Demand
