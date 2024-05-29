@@ -332,6 +332,7 @@ export const PrincingPriceCrds = () => {
         </div>
       </div>
       <br></br>
+      <hr className="mt-10" />
     </div>
   );
 };
