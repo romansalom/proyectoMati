@@ -17,7 +17,7 @@ export const PrincingPriceDetail = () => {
               </th>
               <th className="p-4 text-center border whitespace-nowrap max-w-[150px]">
                 <h3 className="font-bold text-2xl">
-                  Professional <span className="text-xs text-gray-400"></span>
+                  Pro <span className="text-xs text-gray-400"></span>
                 </h3>
               </th>
               <th className="p-4 text-center border whitespace-nowrap max-w-[150px]">
@@ -37,15 +37,9 @@ export const PrincingPriceDetail = () => {
               </td>
               <td className="px-4 py-3 text-center font-bold border max-w-[150px]">
                 600 Pages
-                <p className="text-xs text-gray-400 font-medium mt-1">
-                  Pages Add-ons on Demand
-                </p>
               </td>
               <td className="px-4 py-3  text-center border font-bold max-w-[150px]">
                 Unlimited
-                <p className="text-xs text-gray-400 font-medium mt-1">
-                  Pages Add-ons on Demand
-                </p>
               </td>
             </tr>
             <tr>
@@ -60,9 +54,6 @@ export const PrincingPriceDetail = () => {
               </td>
               <td className="px-4 py-3 font-bold text-center border max-w-[150px]">
                 Unlimited
-                <p className="text-xs text-gray-400 font-medium mt-1">
-                  Pages Add-ons on Demand
-                </p>
               </td>
             </tr>
             <tr>
