@@ -16,9 +16,7 @@ export const PrincingPriceDetail = () => {
                 </h3>
               </th>
               <th className="p-4 text-align-center border whitespace-nowrap max-w-[150px]">
-                <h3 className="font-bold text-2xl">
-                  Professional <span className="text-xs text-gray-400"></span>
-                </h3>
+                <h3 className="font-bold text-2xl">Professional</h3>
               </th>
               <th className="p-4 text-center border whitespace-nowrap max-w-[150px]">
                 <h3 className="font-bold text-2xl">
@@ -30,7 +28,7 @@ export const PrincingPriceDetail = () => {
           <tbody className="border ">
             <tr>
               <td className="px-4 py-3 border max-w-[150px] text-lg font-bold">
-                Number of Users
+                Users
               </td>
               <td className="px-4 py-3 text-center border font-bold max-w-[150px]">
                 20 Pages
@@ -67,7 +65,7 @@ export const PrincingPriceDetail = () => {
             </tr>
             <tr>
               <td className="px-4 py-3 border max-w-[150px] text-lg font-bold">
-                Includes essential features to get started
+                essential features
               </td>
               <td className="px-4 py-3 text-center border max-w-[150px]">
                 <svg
@@ -111,7 +109,7 @@ export const PrincingPriceDetail = () => {
             </tr>
             <tr>
               <td className="px-4 py-3 border max-w-[150px] text-lg font-bold">
-                More advanced features for increased productivity
+                advanced features
               </td>
               <td className="px-4 py-3 text-center border max-w-[150px]">
                 <svg
@@ -203,7 +201,7 @@ export const PrincingPriceDetail = () => {
             </tr>
             <tr>
               <td className="px-4 py-3 border max-w-[150px] text-lg font-bold">
-                Customizable options to meet your specific needs
+                Customizable options
               </td>
               <td className="px-4 py-3 text-center border max-w-[150px]">
                 <svg
