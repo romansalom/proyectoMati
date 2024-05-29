@@ -1,6 +1,7 @@
+import '../App.css';
 export const Servicios = () => {
   return (
-    <div className="font-[sans-serif] text-[#333] mb-10">
+    <div className="contenedoresh-zoom font-[sans-serif] text-[#333] mb-10">
       <div className="max-w-6xl mx-auto">
         <div className="flex justify-center items-center mx-auto  bg-gray-100 rounded-full max-w-[400px] p-1">
           <h2 className="text-3xl font-extrabold">Funcionalidades</h2>
