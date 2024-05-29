@@ -62,10 +62,14 @@
   }
 
   .contenedores-zoom td {
-    font-size: 100%;
+    font-size: 90%;
     /* Aumenta el tamaño de fuente en un 20% */
   }
 
+  .contenedores-zoom th h3 {
+    font-size: 120%;
+    /* Aumenta el tamaño de fuente en un 20% */
+  }
 
 }
 
