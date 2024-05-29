@@ -4,15 +4,16 @@ export const Heroe = () => {
       <div className="grid md:grid-cols-2 items-center md:gap-8 gap-6">
         <div className="max-md:order-1 max-md:text-center">
           <p className="text-sm font-bold text-blue-600 mb-2">
-            <span className="rotate-90 inline-block mr-2">|</span> ALL IN ONE
-            MEETING SCHEDULER
+            <span className="ROTATE-90 inline-block mr-2">|</span> Lorem ipsum
+            dolor sit amet consectetur
           </p>
+
           <h2 className="md:text-5xl text-3xl font-extrabold mb-4 md:!leading-[55px]">
-            Schedule meetings effortlessly
+            Lorem ipsum dolor sit amet consectetur
           </h2>
           <p className="mt-4 text-base text-gray-500 leading-relaxed">
-            Embark on a gastronomic journey with our curated dishes, delivered
-            promptly to your doorstep. Elevate your dining experience today.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+            itaque ut deleniti mollitia blanditiis nesciunt maxime, minus,
           </p>
           <div className="mt-10 space-x-4">
             <button
