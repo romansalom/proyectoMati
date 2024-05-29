@@ -15,7 +15,7 @@ export const PrincingPriceDetail = () => {
                   Starter <span className="text-xs text-gray-400"></span>
                 </h3>
               </th>
-              <th className="p-4 text-center border whitespace-nowrap max-w-[150px]">
+              <th className="p-4 text-align-center border whitespace-nowrap max-w-[150px]">
                 <h3 className="font-bold text-2xl">
                   Professional <span className="text-xs text-gray-400"></span>
                 </h3>
