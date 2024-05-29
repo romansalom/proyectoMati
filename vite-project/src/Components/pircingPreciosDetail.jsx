@@ -1,452 +1,229 @@
-import '../App.css';
+import { useState } from 'react';
+
 export const PrincingPriceDetail = () => {
+  const checkIcon = (
+    <svg
+      className="w-5 h-5 mx-auto text-indigo-600"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+    >
+      <path d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" />
+    </svg>
+  );
+  const minusIcon = (
+    <svg
+      className="w-5 h-5 mx-auto text-gray-500"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+    >
+      <path d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" />
+    </svg>
+  );
+
+  const plans = [
+    {
+      name: 'Starter',
+      desc: 'Lorem ipsum dolor sit amet torrel, consectet adipiscing elit.',
+      price: '20.00',
+    },
+    {
+      name: 'Professional',
+      desc: 'Lorem ipsum dolor sit amet torrel, consectet adipiscing elit.',
+      price: '8.00',
+    },
+    {
+      name: 'Enterprise',
+      desc: 'Lorem ipsum dolor sit amet torrel, consectet adipiscing elit.',
+      price: '5.00',
+    },
+  ];
+
+  const tables = [
+    {
+      label: 'Features',
+      label_icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="blue"
+          className="w-6 h-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+          />
+        </svg>
+      ),
+      items: [
+        {
+          name: 'Aliquam finibus',
+          basic: checkIcon,
+          business: checkIcon,
+          enterprise: checkIcon,
+        },
+        {
+          name: 'Vestibulum tristique',
+          basic: minusIcon,
+          business: checkIcon,
+          enterprise: checkIcon,
+        },
+        {
+          name: 'Aliquam finibus',
+          basic: minusIcon,
+          business: minusIcon,
+          enterprise: checkIcon,
+        },
+        {
+          name: 'Praesent aliquet',
+          basic: minusIcon,
+          business: '150GB',
+          enterprise: 'Unlimited',
+        },
+        {
+          name: 'Praesent aliquet',
+          basic: minusIcon,
+          business: '150GB',
+          enterprise: 'Unlimited',
+        },
+        {
+          name: 'Praesent aliquet',
+          basic: minusIcon,
+          business: '150GB',
+          enterprise: 'Unlimited',
+        },
+        {
+          name: 'Praesent aliquet',
+          basic: minusIcon,
+          business: '150GB',
+          enterprise: 'Unlimited',
+        },
+        {
+          name: 'Praesent aliquet',
+          basic: minusIcon,
+          business: '150GB',
+          enterprise: 'Unlimited',
+        },
+      ],
+    },
+  ];
+
+  const [selectedPlan, setSelectedPlan] = useState(plans[0].name);
+
   return (
-    <div className="contenedores-zoom max-w-6xl mx-auto font-sans text-[#333] shadow-[0_4px_60px_-4px_rgba(93,96,127,0.6)] rounded-3xl">
-      <div className="overflow-x-auto mt-5">
-        <table className="w-full border border-collapse min-w-[980px]">
-          <thead>
-            <tr>
-              <th className="p-4 text-left border max-w-[150px]">
-                <h3 className="font-bold text-base whitespace-nowrap"></h3>
-                <p className="text-xs text-gray-400 font-medium mt-2"></p>
-              </th>
-              <th className="p-4 text-center border whitespace-nowrap max-w-[150px]">
-                <h3 className="font-bold text-2xl">
-                  Starter <span className="text-xs text-gray-400"></span>
-                </h3>
-              </th>
-              <th className="p-4 text-center border whitespace-nowrap max-w-[150px]">
-                <h3 className="font-bold text-2xl">
-                  Pro <span className="text-xs text-gray-400"></span>
-                </h3>
-              </th>
-              <th className="p-4 text-center border whitespace-nowrap max-w-[150px]">
-                <h3 className="font-bold text-2xl">
-                  Enterprise <span className="text-xs text-gray-400"></span>
-                </h3>
-              </th>
-            </tr>
-          </thead>
-          <tbody className="border ">
-            <tr>
-              <td className="px-4 py-3 border max-w-[150px] text-lg font-bold">
-                Users
-              </td>
-              <td className="px-4 py-3 text-center border font-bold max-w-[150px]">
-                20 Pages
-              </td>
-              <td className="px-4 py-3 text-center font-bold border max-w-[150px]">
-                600 Pages
-              </td>
-              <td className="px-4 py-3  text-center border font-bold max-w-[150px]">
-                Unlimited
-              </td>
-            </tr>
-            <tr>
-              <td className="px-4 py-3 border max-w-[150px] text-lg font-bold">
-                Users Per Page
-              </td>
-              <td className="px-4 py-3 font-bold text-center border max-w-[150px]">
-                5 Pages
-              </td>
-              <td className="px-4 py-3 font-bold text-center border max-w-[150px]">
-                50 Pages
-              </td>
-              <td className="px-4 py-3 font-bold text-center border max-w-[150px]">
-                Unlimited
-              </td>
-            </tr>
-            <tr>
-              <td className="px-4 py-3 border max-w-[150px] text-lg font-bold">
-                essential features
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  className="fill-green-500 inline"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  className="fill-green-500 inline"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  className="fill-green-500 inline"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-            </tr>
-            <tr>
-              <td className="px-4 py-3 border max-w-[150px] text-lg font-bold">
-                advanced features
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  className="fill-green-500 inline"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  className="fill-green-500 inline"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  className="fill-green-500 inline"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-            </tr>
-            <tr>
-              <td className="px-4 py-3 border max-w-[150px] text-lg font-bold">
-                Designing & Development
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  className="fill-red-500 inline"
-                  viewBox="0 0 320.591 320.591"
-                >
-                  <path
-                    d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-                    data-original="#000000"
-                  />
-                  <path
-                    d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  className="fill-green-500 inline"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  className="fill-green-500 inline"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-            </tr>
-            <tr>
-              <td className="px-4 py-3 border max-w-[150px] text-lg font-bold">
-                Customizable options
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  className="fill-red-500 inline"
-                  viewBox="0 0 320.591 320.591"
-                >
-                  <path
-                    d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-                    data-original="#000000"
-                  />
-                  <path
-                    d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  className="fill-green-500 inline"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  className="fill-green-500 inline"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-            </tr>
-            <tr>
-              <td className="px-4 py-3 border max-w-[150px] text-lg font-bold">
-                Secure data storage
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  className="fill-red-500 inline"
-                  viewBox="0 0 320.591 320.591"
-                >
-                  <path
-                    d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-                    data-original="#000000"
-                  />
-                  <path
-                    d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  className="fill-red-500 inline"
-                  viewBox="0 0 320.591 320.591"
-                >
-                  <path
-                    d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-                    data-original="#000000"
-                  />
-                  <path
-                    d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  className="fill-green-500 inline"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-            </tr>
-            <tr>
-              <td className="px-4 py-3 border max-w-[150px] text-lg font-bold">
-                Email Support
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  className="fill-red-500 inline"
-                  viewBox="0 0 320.591 320.591"
-                >
-                  <path
-                    d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-                    data-original="#000000"
-                  />
-                  <path
-                    d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  className="fill-red-500 inline"
-                  viewBox="0 0 320.591 320.591"
-                >
-                  <path
-                    d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-                    data-original="#000000"
-                  />
-                  <path
-                    d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  className="fill-green-500 inline"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-            </tr>
-            <tr>
-              <td className="px-4 py-3 border max-w-[150px] text-lg font-bold">
-                24/7 customer support
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  className="fill-red-500 inline"
-                  viewBox="0 0 320.591 320.591"
-                >
-                  <path
-                    d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-                    data-original="#000000"
-                  />
-                  <path
-                    d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  className="fill-red-500 inline"
-                  viewBox="0 0 320.591 320.591"
-                >
-                  <path
-                    d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-                    data-original="#000000"
-                  />
-                  <path
-                    d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  className="fill-green-500 inline"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-            </tr>
-            <tr>
-              <td className="px-4 py-3  max-w-[150px] text-lg font-bold">
-                Analytics and reporting
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  className="fill-red-500 inline"
-                  viewBox="0 0 320.591 320.591"
-                >
-                  <path
-                    d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z"
-                    data-original="#000000"
-                  />
-                  <path
-                    d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  className="fill-green-500 inline"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-              <td className="px-4 py-3 text-center border max-w-[150px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  className="fill-green-500 inline"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
-                    data-original="#000000"
-                  />
-                </svg>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <section className="py-14 text-gray-600">
+      <div className="">
+        <div className="relative max-w-xl mx-auto space-y-3 px-4 sm:text-center md:px-0">
+          <p className="text-gray-800 text-3xl font-sans font-semibold sm:text-4xl">
+            Compare Nuestros Planes
+          </p>
+        </div>
+        <div className="mt-16">
+          <div className="sticky top-0 py-6 border-b bg-white">
+            <div className="max-w-screen-xl mx-auto">
+              <ul className="ml-auto flex gap-x-6 px-4 md:px-8 lg:max-w-3xl">
+                {plans.map((item, idx) => (
+                  <li
+                    key={idx}
+                    className={`space-y-4 w-full ${
+                      item.name != selectedPlan ? 'hidden lg:block' : ''
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-700 font-medium">
+                        {item.name}
+                      </span>
+                      <div className="relative lg:hidden">
+                        <svg
+                          className="w-5 h-5 text-gray-500 absolute right-0 inset-y-0 my-auto"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        <select
+                          value="Switch plan"
+                          className="bg-transparent appearance-none outline-none px-8 cursor-pointer"
+                          onChange={(e) => setSelectedPlan(e.target.value)}
+                        >
+                          <option disabled selected>
+                            Switch plan
+                          </option>
+                          {plans.map((option, idx) => (
+                            <option key={idx}>{option.name}</option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                    <div className="text-gray-800 text-3xl font-semibold">
+                      ${item.price}{' '}
+                      <span className="text-xl text-gray-600 font-normal">
+                        /mo
+                      </span>
+                    </div>
+                    <p className="text-sm">{item.desc}</p>
+                    <button className="px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150 text-white bg-blue-600 hover:bg-blue-500 active:bg-indigo-700">
+                      Get Started
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="max-w-screen-xl mx-auto mt-10 space-y-4 px-4 overflow-auto md:overflow-visible md:px-8">
+            {tables.map((table, idx) => (
+              <table key={idx} className="w-full table-auto text-sm text-left">
+                <thead className="text-gray-600 font-medium border-b">
+                  <tr>
+                    <th className="z-20 top-12 py-6 lg:sticky">
+                      <div className="flex items-center gap-x-3">
+                        <div className="w-12 h-12 text-indigo-600 rounded-full border flex items-center justify-center">
+                          {table.label_icon}
+                        </div>
+                        <h4 className="text-gray-800 text-xl font-medium">
+                          {table.label}
+                        </h4>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="text-gray-600 divide-y">
+                  {table.items.map((item, idx) => (
+                    <>
+                      <tr key={idx}>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          {item.name}
+                        </td>
+                        {/* For large devices */}
+                        <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell">
+                          {item.basic}
+                        </td>
+                        <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell">
+                          {item.business}
+                        </td>
+                        <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell">
+                          {item.enterprise}
+                        </td>
+                        {/* For small devices */}
+                        <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap lg:hidden">
+                          {item[selectedPlan.toLowerCase()]}
+                        </td>
+                      </tr>
+                    </>
+                  ))}
+                </tbody>
+              </table>
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
