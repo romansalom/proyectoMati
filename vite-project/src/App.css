@@ -46,8 +46,29 @@
 
 .contenedores-zoom {
   zoom: 80%;
-  /* o transform: scale(0.8); */
+  /* Valor por defecto para pantallas grandes */
 }
+
+.contenedores-zoom td {
+  font-size: 130%;
+  /* Aumenta el tamaño de fuente en un 20% */
+}
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .contenedores-zoom {
+    zoom: 55%;
+    /* Cambiar el zoom para pantallas más pequeñas */
+  }
+
+  .contenedores-zoom td {
+    font-size: 140%;
+    /* Aumenta el tamaño de fuente en un 20% */
+  }
+
+
+}
+
 
 .contenedore-zoom {
   zoom: 85%;
