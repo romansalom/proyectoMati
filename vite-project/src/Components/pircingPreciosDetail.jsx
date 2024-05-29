@@ -60,50 +60,44 @@ export const PrincingPriceDetail = () => {
       items: [
         {
           name: 'Aliquam finibus',
-          basic: checkIcon,
-          business: checkIcon,
+          starter: checkIcon,
+          professional: checkIcon,
           enterprise: checkIcon,
         },
         {
           name: 'Vestibulum tristique',
-          basic: minusIcon,
-          business: checkIcon,
+          starter: minusIcon,
+          professional: checkIcon,
           enterprise: checkIcon,
         },
         {
           name: 'Aliquam finibus',
-          basic: minusIcon,
-          business: minusIcon,
+          starter: minusIcon,
+          professional: minusIcon,
           enterprise: checkIcon,
         },
         {
           name: 'Praesent aliquet',
-          basic: minusIcon,
-          business: '150GB',
+          starter: minusIcon,
+          professional: '150GB',
           enterprise: 'Unlimited',
         },
         {
           name: 'Praesent aliquet',
-          basic: minusIcon,
-          business: '150GB',
+          starter: minusIcon,
+          professional: '150GB',
           enterprise: 'Unlimited',
         },
         {
           name: 'Praesent aliquet',
-          basic: minusIcon,
-          business: '150GB',
+          starter: minusIcon,
+          professional: '150GB',
           enterprise: 'Unlimited',
         },
         {
           name: 'Praesent aliquet',
-          basic: minusIcon,
-          business: '150GB',
-          enterprise: 'Unlimited',
-        },
-        {
-          name: 'Praesent aliquet',
-          basic: minusIcon,
-          business: '150GB',
+          starter: minusIcon,
+          professional: '150GB',
           enterprise: 'Unlimited',
         },
       ],
@@ -115,10 +109,8 @@ export const PrincingPriceDetail = () => {
   return (
     <section className="py-14 text-gray-600">
       <div className="">
-        <div className="relative max-w-xl mx-auto space-y-3 px-4 sm:text-center md:px-0">
-          <p className="text-gray-800 text-3xl font-sans font-semibold sm:text-4xl">
-            Compare Nuestros Planes
-          </p>
+        <div className="flex justify-center items-center mx-auto mt-8 bg-gray-100 rounded-full max-w-[300px] p-1">
+          <h2 className="text-3xl text-[#333] font-bold">Compare Planes</h2>
         </div>
         <div className="mt-16">
           <div className="sticky top-0 py-6 border-b bg-white">
@@ -149,12 +141,12 @@ export const PrincingPriceDetail = () => {
                           />
                         </svg>
                         <select
-                          value="Switch plan"
+                          value="Cambiar plan"
                           className="bg-transparent appearance-none outline-none px-8 cursor-pointer"
                           onChange={(e) => setSelectedPlan(e.target.value)}
                         >
                           <option disabled selected>
-                            Switch plan
+                            Cambiar plan{' '}
                           </option>
                           {plans.map((option, idx) => (
                             <option key={idx}>{option.name}</option>
@@ -203,10 +195,10 @@ export const PrincingPriceDetail = () => {
                         </td>
                         {/* For large devices */}
                         <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell">
-                          {item.basic}
+                          {item.starter}
                         </td>
                         <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell">
-                          {item.business}
+                          {item.professional}
                         </td>
                         <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap hidden lg:table-cell">
                           {item.enterprise}
