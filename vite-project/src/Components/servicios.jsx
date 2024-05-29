@@ -8,8 +8,8 @@ export const Servicios = () => {
         </div>
         <br></br>
         <br></br>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 max-md:max-w-lg mx-auto gap-8">
-          <div className="px-4 py-6 flex bg-white rounded-md border shadow-[0_14px_40px_-11px_rgba(93,96,127,0.2)]">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 max-md:max-w-lg mx-auto gap-8 ">
+          <div className="px-4 py-6 flex bg-white rounded-md border shadow-[0_14px_40px_-11px_rgba(93,96,127,0.2)] hover:shadow-lg transition duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="white"
@@ -25,7 +25,7 @@ export const Servicios = () => {
                 data-original="#000000"
               />
             </svg>
-            <div>
+            <div className="hover:shadow-lg transition duration-300">
               <h3 className="text-xl font-extrabold mb-2">Customization</h3>
               <p className="text-gray-500 text-sm">
                 Tailor our product to suit your needs Tailor our product to suit
@@ -33,7 +33,7 @@ export const Servicios = () => {
               </p>
             </div>
           </div>
-          <div className="px-4 py-6 flex bg-white rounded-md border">
+          <div className="px-4 py-6 flex bg-white rounded-md border shadow-[0_14px_40px_-11px_rgba(93,96,127,0.2)] hover:shadow-lg transition duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="white"
@@ -65,14 +65,14 @@ export const Servicios = () => {
                 />
               </g>
             </svg>
-            <div>
+            <div className="hover:shadow-lg transition duration-300">
               <h3 className="text-xl font-extrabold mb-2">Security</h3>
               <p className="text-gray-500 text-sm">
                 Your data is protected by the latest security measures.
               </p>
             </div>
           </div>
-          <div className="px-4 py-6 flex bg-white rounded-md border">
+          <div className="px-4 py-6 flex bg-white rounded-md border shadow-[0_14px_40px_-11px_rgba(93,96,127,0.2)] hover:shadow-lg transition duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="white"
@@ -84,7 +84,7 @@ export const Servicios = () => {
                 data-original="#000000"
               />
             </svg>
-            <div>
+            <div className="hover:shadow-lg transition duration-300">
               <h3 className="text-xl font-extrabold mb-2">Support</h3>
               <p className="text-gray-500 text-sm">
                 Tailor our product to suit your needs 24/7 customer support for
@@ -92,7 +92,7 @@ export const Servicios = () => {
               </p>
             </div>
           </div>
-          <div className="px-4 py-6 flex bg-white rounded-md border">
+          <div className="px-4 py-6 flex bg-white rounded-md border shadow-[0_14px_40px_-11px_rgba(93,96,127,0.2)] hover:shadow-lg transition duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="white"
@@ -114,14 +114,14 @@ export const Servicios = () => {
                 />
               </g>
             </svg>
-            <div>
+            <div className="hover:shadow-lg transition duration-300">
               <h3 className="text-xl font-extrabold mb-2">Performance</h3>
               <p className="text-gray-500 text-sm">
                 Experience blazing-fast performance with our product.
               </p>
             </div>
           </div>
-          <div className="px-4 py-6 flex bg-white rounded-md border shadow-[0_14px_40px_-11px_rgba(93,96,127,0.2)]">
+          <div className="px-4 py-6 flex bg-white rounded-md border shadow-[0_14px_40px_-11px_rgba(93,96,127,0.2)] hover:shadow-lg transition duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="white"
@@ -157,7 +157,7 @@ export const Servicios = () => {
                 data-original="#000000"
               />
             </svg>
-            <div>
+            <div className="hover:shadow-lg transition duration-300">
               <h3 className="text-xl font-extrabold mb-2">Global Reach</h3>
               <p className="text-gray-500 text-sm">
                 Tailor our product to suit your needs Expand your reach with our
@@ -165,7 +165,7 @@ export const Servicios = () => {
               </p>
             </div>
           </div>
-          <div className="px-4 py-6 flex bg-white rounded-md border">
+          <div className="px-4 py-6 flex bg-white rounded-md border shadow-[0_14px_40px_-11px_rgba(93,96,127,0.2)] hover:shadow-lg transition duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="white"
@@ -191,7 +191,7 @@ export const Servicios = () => {
                 />
               </g>
             </svg>
-            <div>
+            <div className="hover:shadow-lg transition duration-300">
               <h3 className="text-xl font-extrabold mb-2">Communication</h3>
               <p className="text-gray-500 text-sm">
                 Tailor our product to suit your needs Seamless communication for
