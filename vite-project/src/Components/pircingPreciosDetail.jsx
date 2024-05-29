@@ -100,6 +100,36 @@ export const PrincingPriceDetail = () => {
           professional: '150GB',
           enterprise: 'Unlimited',
         },
+        {
+          name: 'Praesent aliquet',
+          starter: minusIcon,
+          professional: '150GB',
+          enterprise: 'Unlimited',
+        },
+        {
+          name: 'Praesent aliquet',
+          starter: minusIcon,
+          professional: '150GB',
+          enterprise: 'Unlimited',
+        },
+        {
+          name: 'Praesent aliquet',
+          starter: minusIcon,
+          professional: '150GB',
+          enterprise: 'Unlimited',
+        },
+        {
+          name: 'Praesent aliquet',
+          starter: minusIcon,
+          professional: '150GB',
+          enterprise: 'Unlimited',
+        },
+        {
+          name: 'Praesent aliquet',
+          starter: minusIcon,
+          professional: '150GB',
+          enterprise: 'Unlimited',
+        },
       ],
     },
   ];
