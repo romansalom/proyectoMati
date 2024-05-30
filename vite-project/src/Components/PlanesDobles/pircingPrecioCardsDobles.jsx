@@ -3,13 +3,13 @@ export const PrincingPriceCrdsDoble = () => {
   return (
     <div className="contenedore-zoom max-w-5xl mx-auto font-sans text-[#333]  mb-10">
       <br></br>
-      <div className="flex justify-center items-center mx-auto mt-8 bg-gray-100 rounded-full max-w-[200px] p-1">
+      <div className="flex justify-center items-center mx-auto mt-8 rounded-full max-w-[200px] p-1">
         <h2 className="text-3xl font-extrabold text-[#333]">Planes 2</h2>
       </div>
       <br></br>
 
       <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-y-8 mt-8 max-md:max-w-sm max-md:mx-auto">
-        <div className="bg-gray-100 rounded-3xl overflow-hidden p-8">
+        <div className="bg-white scale-[1.05] shadow-[0_4px_60px_-4px_rgba(93,96,127,0.6)]  rounded-3xl overflow-hidden p-8">
           <div className="text-left">
             <h4 className="text-2xl font-extrabold">Starter 2</h4>
             <p className="text-xs mt-2">Ideal for individuals.</p>
@@ -223,7 +223,7 @@ export const PrincingPriceCrdsDoble = () => {
             </ul>
           </div>
         </div>
-        <div className="bg-gray-100 rounded-3xl overflow-hidden p-8">
+        <div className="bg-white scale-[1.05] shadow-[0_4px_60px_-4px_rgba(93,96,127,0.6)]  rounded-3xl overflow-hidden p-8">
           <div className="text-left">
             <h4 className="text-2xl font-extrabold">Enterprise 2</h4>
             <p className="text-xs mt-2">Ideal for larger Teams.</p>
