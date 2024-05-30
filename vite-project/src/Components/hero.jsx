@@ -24,7 +24,7 @@ export const Heroe = () => {
             </button>
             <button
               type="button"
-              className="bg-transparent hover:bg-blue-600 hover:text-white border-2 border-blue-600 transition-all text-blue-600 font-bold text-sm rounded-full px-6 py-2.5"
+              className="bg-transparent hover:bg-blue-600 hover:text-white border-2 border-blue-500 transition-all text-blue-600 font-bold text-sm rounded-full px-6 py-2.5"
             >
               Learn more
             </button>

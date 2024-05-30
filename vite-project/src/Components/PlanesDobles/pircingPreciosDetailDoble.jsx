@@ -153,7 +153,7 @@ export const PrincingPriceDetailDoble = () => {
                 <tbody className="text-gray-600 divide-y">
                   {table.items.map((item, idx) => (
                     <tr key={idx}>
-                      <td className="px-6 text-black py-4 whitespace-nowrap">
+                      <td className="px-6 font-semibold text-[#333] text-black py-4 whitespace-nowrap">
                         {item.name}
                       </td>
                       {/* Renderizado de los valores de los tres planes */}
