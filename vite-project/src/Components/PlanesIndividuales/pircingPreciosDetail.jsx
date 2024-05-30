@@ -175,6 +175,7 @@ export const PrincingPriceDetail = () => {
           {/* Eliminamos el selector de planes */}
         </div>
       </div>
+      <hr />
     </section>
   );
 };
