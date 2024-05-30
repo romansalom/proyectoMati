@@ -57,7 +57,7 @@ export const PrincingPriceDetailDoble = () => {
       ),
       items: [
         {
-          name: 'Planes',
+          name: '',
           starter: 'Starter2',
           professional: 'Professional2',
           enterprise: 'Enterprise2',
@@ -143,9 +143,6 @@ export const PrincingPriceDetailDoble = () => {
                   <tr>
                     <th className="z-20 top-12 py-6 lg:sticky">
                       <div className="flex items-center gap-x-3">
-                        <div className="w-12 h-12 text-indigo-600 rounded-full border flex items-center justify-center">
-                          {table.label_icon}
-                        </div>
                         <h4 className="text-gray-800 text-xl font-medium">
                           {table.label}
                         </h4>
@@ -156,7 +153,7 @@ export const PrincingPriceDetailDoble = () => {
                 <tbody className="text-gray-600 divide-y">
                   {table.items.map((item, idx) => (
                     <tr key={idx}>
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      <td className="px-6 text-black py-4 whitespace-nowrap">
                         {item.name}
                       </td>
                       {/* Renderizado de los valores de los tres planes */}
@@ -178,6 +175,7 @@ export const PrincingPriceDetailDoble = () => {
           {/* Eliminamos el selector de planes */}
         </div>
       </div>
+      <hr />
     </section>
   );
 };

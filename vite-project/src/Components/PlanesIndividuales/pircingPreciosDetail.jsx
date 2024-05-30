@@ -57,7 +57,7 @@ export const PrincingPriceDetail = () => {
       ),
       items: [
         {
-          name: 'Planes',
+          name: '',
           starter: 'Starter',
           professional: 'Professional',
           enterprise: 'Enterprise',
@@ -143,9 +143,6 @@ export const PrincingPriceDetail = () => {
                   <tr>
                     <th className="z-20 top-12 py-6 lg:sticky">
                       <div className="flex items-center gap-x-3">
-                        <div className="w-12 h-12 text-indigo-600 rounded-full border flex items-center justify-center">
-                          {table.label_icon}
-                        </div>
                         <h4 className="text-gray-800 text-xl font-medium">
                           {table.label}
                         </h4>

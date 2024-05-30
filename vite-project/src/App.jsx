@@ -13,8 +13,6 @@ function App() {
 
       <Servicios></Servicios>
       <Tabsventana></Tabsventana>
-
-      <hr className="mt-10" />
     </div>
   );
 }

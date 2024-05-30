@@ -57,7 +57,7 @@ export const PrincingPriceDetailFamiliar = () => {
       ),
       items: [
         {
-          name: 'PlanesF',
+          name: '',
           starter: 'StarterF',
           professional: 'ProfessionalF',
           enterprise: 'EnterpriseF',
@@ -143,9 +143,6 @@ export const PrincingPriceDetailFamiliar = () => {
                   <tr>
                     <th className="z-20 top-12 py-6 lg:sticky">
                       <div className="flex items-center gap-x-3">
-                        <div className="w-12 h-12 text-indigo-600 rounded-full border flex items-center justify-center">
-                          {table.label_icon}
-                        </div>
                         <h4 className="text-gray-800 text-xl font-medium">
                           {table.label}
                         </h4>
@@ -178,6 +175,7 @@ export const PrincingPriceDetailFamiliar = () => {
           {/* Eliminamos el selector de planes */}
         </div>
       </div>
+      <hr />
     </section>
   );
 };

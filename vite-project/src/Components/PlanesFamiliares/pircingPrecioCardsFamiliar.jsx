@@ -3,8 +3,8 @@ export const PrincingPriceCrdsFamiliar = () => {
   return (
     <div className="contenedore-zoom max-w-5xl mx-auto font-sans text-[#333]  mb-10">
       <br></br>
-      <div className="flex justify-center items-center mx-auto mt-8 bg-gray-100 rounded-full max-w-[200px] p-1">
-        <h2 className="text-3xl font-bold">Planes FAM</h2>
+      <div className="flex justify-center items-center mx-auto mt-8 bg-gray-100 rounded-full max-w-[300px] p-1">
+        <h2 className="text-3xl font-extrabold text-[#333] ">Planes FAM</h2>
       </div>
       <br></br>
 
@@ -332,7 +332,6 @@ export const PrincingPriceCrdsFamiliar = () => {
         </div>
       </div>
       <br></br>
-      <hr className="mt-10" />
     </div>
   );
 };

@@ -128,7 +128,7 @@ export const Servicios = () => {
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
         <div className="relative max-w-2xl mx-auto sm:text-center">
           <div className="relative z-10">
-            <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+            <h3 className=" text-3xl font-extrabold text-[#333]  sm:text-4xl">
               Let’s help power your SaaS
             </h3>
             <p className="mt-3">
