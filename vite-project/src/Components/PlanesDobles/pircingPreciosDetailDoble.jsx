@@ -1,6 +1,4 @@
-import { useState } from 'react';
-
-export const PrincingPriceDetail = () => {
+export const PrincingPriceDetailDoble = () => {
   const checkIcon = (
     <svg
       className="w-5 h-5 mx-auto text-indigo-600"
@@ -20,7 +18,7 @@ export const PrincingPriceDetail = () => {
     </svg>
   );
 
-  const plans = [
+  /* const plans = [
     {
       name: 'Starter',
       desc: 'Lorem ipsum dolor sit amet torrel, consectet adipiscing elit.',
@@ -37,7 +35,7 @@ export const PrincingPriceDetail = () => {
       price: '5.00',
     },
   ];
-
+*/
   const tables = [
     {
       label: '',
@@ -60,9 +58,9 @@ export const PrincingPriceDetail = () => {
       items: [
         {
           name: 'Planes',
-          starter: 'Starter',
-          professional: 'Professional',
-          enterprise: 'Enterprise',
+          starter: 'Starter2',
+          professional: 'Professional2',
+          enterprise: 'Enterprise2',
         },
         {
           name: 'Vestibulum tristique',
