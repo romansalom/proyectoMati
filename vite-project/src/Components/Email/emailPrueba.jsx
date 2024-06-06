@@ -43,7 +43,7 @@ const EmailPrueba = () => {
         <div className="fixed inset-0 p-4 flex justify-center items-center z-50 bg-black bg-opacity-50">
           <div
             className="w-full max-w-lg bg-white shadow-xl rounded-xl p-6 relative"
-            style={{ touchAction: 'manipulation', zoom: '80%' }} // Desactivar el zoom en dispositivos móviles
+            style={{ zoom: '80%' }} // Desactivar el zoom en dispositivos móviles
           >
             {!isFormSubmitted && (
               <svg
