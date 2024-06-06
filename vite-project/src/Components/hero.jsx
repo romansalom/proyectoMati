@@ -2,14 +2,14 @@ import ImageComparisonSlider from './SliderImagen/sliderImage';
 
 export const Heroe = () => {
   return (
-    <div className="font-sans text-[#333] max-w-6xl max-md:max-w-md mx-auto  mt-5 ">
+    <div className="font-sans text-[#333] max-w-6xl mx-auto mt-20 mb-0">
       <div className="grid md:grid-cols-2 items-center md:gap-8 gap-6">
-        <div className="max-md:order-1 max-md:text-center">
-          <p className="text-sm font-bold text-blue-600 mb-2">
-            <span className="ROTATE-90 inline-block mr-2">|</span> Lorem ipsum
-            dolor sit amet consectetur
-          </p>
-
+        <div className="md:hidden">
+          <div className="relative z-10">
+            <ImageComparisonSlider></ImageComparisonSlider>
+          </div>
+        </div>
+        <div>
           <h2 className="md:text-5xl text-3xl font-extrabold mb-4 md:!leading-[55px]">
             Lorem ipsum dolor sit amet consectetur
           </h2>
@@ -33,7 +33,7 @@ export const Heroe = () => {
           </div>
           <hr className="mt-10" />
         </div>
-        <div className="flex items-center justify-center relative max-md:before:hidden lg:h-[650px] md:h-[550px]">
+        <div className="hidden md:flex items-center justify-center relative">
           <div className="relative z-10">
             <ImageComparisonSlider></ImageComparisonSlider>
           </div>

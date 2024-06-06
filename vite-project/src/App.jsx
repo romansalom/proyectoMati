@@ -10,6 +10,7 @@ function App() {
   return (
     <div>
       <Navbar></Navbar>
+
       <Heroe></Heroe>
 
       <Servicios></Servicios>

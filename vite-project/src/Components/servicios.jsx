@@ -124,7 +124,12 @@ export const Servicios = () => {
   ];
 
   return (
-    <section className="py-14">
+    <section className="py-20 relative">
+      {
+        /* Fondo degradado para toda la sección */
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-blue-100 to-blue-200 opacity-50 blur-3xl"></div>
+      }
+
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
         <div className="relative max-w-2xl mx-auto sm:text-center">
           <div className="relative z-10">
@@ -136,13 +141,6 @@ export const Servicios = () => {
               congue, nisl eget molestie varius, enim ex faucibus purus.
             </p>
           </div>
-          <div
-            className="absolute inset-0 max-w-xs mx-auto h-44 blur-[118px]"
-            style={{
-              background:
-                'linear-gradient(152.92deg, rgba(96, 165, 250, 0.2) 4.54%, rgba(59, 130, 246, 0.26) 34.2%, rgba(96, 165, 250, 0.1) 99.55%)',
-            }}
-          ></div>
         </div>
         <div className="relative mt-12">
           <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -161,8 +159,6 @@ export const Servicios = () => {
           </ul>
         </div>
       </div>
-      <br></br>
-      <br></br>
     </section>
   );
 };
