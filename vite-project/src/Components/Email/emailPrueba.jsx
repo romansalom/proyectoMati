@@ -43,7 +43,7 @@ const EmailPrueba = () => {
         <div className="fixed inset-0 p-4 flex justify-center items-center z-50 bg-black bg-opacity-50">
           <div
             className="w-full max-w-lg bg-white shadow-lg rounded-md p-6 relative"
-            style={{ zoom: '90%' }}
+            style={{ zoom: '70%' }}
           >
             {!isFormSubmitted && (
               <svg
