@@ -1,4 +1,5 @@
 import './App.css';
+import EmailPrueba from './Components/Email/emailPrueba.jsx';
 import Marcas from './Components/MacrasBanner/bannerMarcas.jsx';
 import { PrincingPriceDetail } from './Components/PlanesIndividuales/pircingPreciosDetail.jsx';
 import { Heroe } from './Components/hero.jsx';
@@ -19,6 +20,7 @@ function App() {
 
       <Marcas></Marcas>
       <PrincingPriceDetail></PrincingPriceDetail>
+      <EmailPrueba></EmailPrueba>
     </div>
   );
 }
