@@ -1,3 +1,5 @@
+import ImageComparisonSlider from './SliderImagen/sliderImage';
+
 export const Heroe = () => {
   return (
     <div className="font-sans text-[#333] max-w-6xl max-md:max-w-md mx-auto  mt-5 ">
@@ -33,11 +35,7 @@ export const Heroe = () => {
         </div>
         <div className="flex items-center justify-center relative max-md:before:hidden lg:h-[650px] md:h-[550px]">
           <div className="relative z-10">
-            <img
-              src="https://readymadeui.com/photo.webp"
-              className="rounded-md lg:w-3/4 md:w-11/12"
-              alt="Dining Experience"
-            />
+            <ImageComparisonSlider></ImageComparisonSlider>
           </div>
         </div>
       </div>

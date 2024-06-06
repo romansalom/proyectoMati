@@ -1,5 +1,5 @@
 import './App.css';
-import ImageComparisonSlider from './Components/SliderImagen/sliderImage.jsx';
+import Marcas from './Components/MacrasBanner/bannerMarcas.jsx';
 import { Heroe } from './Components/hero.jsx';
 import { Navbar } from './Components/navBar.jsx';
 
@@ -14,7 +14,8 @@ function App() {
 
       <Servicios></Servicios>
       <Tabsventana></Tabsventana>
-      <ImageComparisonSlider></ImageComparisonSlider>
+
+      <Marcas></Marcas>
     </div>
   );
 }

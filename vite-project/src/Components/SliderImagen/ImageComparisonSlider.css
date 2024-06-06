@@ -12,6 +12,16 @@
     }
 }
 
-.react-compare-slider {
-    width: 100%;
+.react-compare-slider-container {
+    border-radius: 15px;
+    /* Bordes redondos */
+    overflow: hidden;
+    /* Oculta el contenido que sobresale del contenedor */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra 3D */
+}
+
+.react-compare-slider-handle {
+    border-radius: 50%;
+    /* Bordes redondos para el control deslizante */
 }
