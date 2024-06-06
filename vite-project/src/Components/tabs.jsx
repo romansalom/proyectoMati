@@ -1,110 +1,341 @@
-import * as Tabs from '@radix-ui/react-tabs';
-import { useState } from 'react';
-import { PrincingPriceCrds } from './PlanesIndividuales/pircingPrecioCards';
-import { PrincingPriceDetail } from './PlanesIndividuales/pircingPreciosDetail';
-import { PrincingPriceCrdsDoble } from './PlanesDobles/pircingPrecioCardsDobles';
-import { PrincingPriceDetailDoble } from './PlanesDobles/pircingPreciosDetailDoble';
-import { PrincingPriceDetailFamiliar } from './PlanesFamiliares/pircingPreciosDetailFamiliar';
-import { PrincingPriceCrdsFamiliar } from './PlanesFamiliares/pircingPrecioCardsFamiliar';
-
-const Individual = () => (
-  <div>
-    <PrincingPriceCrds></PrincingPriceCrds>
-    <div className="mb-10">
-      {' '}
-      <PrincingPriceDetail></PrincingPriceDetail>
-    </div>
-  </div>
-);
-
-const Doble = () => (
-  <div>
-    <PrincingPriceCrdsDoble></PrincingPriceCrdsDoble>
-    <div className="mb-10">
-      {' '}
-      <PrincingPriceDetailDoble></PrincingPriceDetailDoble>
-    </div>
-  </div>
-);
-
-const Familiar = () => (
-  <div>
-    <PrincingPriceCrdsFamiliar></PrincingPriceCrdsFamiliar>
-    <div className="mb-10">
-      {' '}
-      <PrincingPriceDetailFamiliar></PrincingPriceDetailFamiliar>
-    </div>
-  </div>
-);
-
 export const Tabsventana = () => {
-  const [selectedTab, setSelectedTab] = useState('Individual');
-
-  const tabItems = ['Individual', 'Doble', 'Familiar'];
-
-  const renderContent = () => {
-    switch (selectedTab) {
-      case 'Individual':
-        return <Individual />;
-      case 'Doble':
-        return <Doble />;
-      case 'Familiar':
-        return <Familiar />;
-      default:
-        return null;
-    }
-  };
-
   return (
-    <Tabs.Root
-      className="max-w-screen-xl mt-2 mx-auto px-4 md:px-8"
-      value={selectedTab}
-      onValueChange={(val) => setSelectedTab(val)}
-    >
-      <Tabs.List
-        className="hidden bg-gray-100 py-1.5 px-2.5 rounded-lg gap-x-3 overflow-x-auto text-sm sm:flex"
-        aria-label="Manage your account"
-      >
-        {tabItems.map((item, idx) => (
-          <Tabs.Trigger
-            key={idx}
-            className="data-[state=active]:bg-white data-[state=active]:text-blue-600 data-[state=active]:shadow-sm py-1.5 px-3 rounded-lg duration-150 text-gray-500 hover:text-blue-600 hover:bg-white active:bg-white/50 font-medium"
-            value={item}
-          >
-            {item}
-          </Tabs.Trigger>
-        ))}
-      </Tabs.List>
-      <div className="relative text-gray-500 sm:hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          className="pointer-events-none w-5 h-5 absolute right-2 inset-y-0 my-auto"
-        >
-          <path
-            fillRule="evenodd"
-            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-            clipRule="evenodd"
-          />
-        </svg>
-        <select
-          value={selectedTab}
-          className="py-2 px-3 w-full bg-transparent appearance-none outline-none border rounded-lg shadow-sm focus:border-blue-600 text-sm"
-          onChange={(e) => setSelectedTab(e.target.value)}
-        >
-          {tabItems.map((item, idx) => (
-            <option key={idx} value={item}>
-              {item}
-            </option>
-          ))}
-        </select>
+    <div>
+      {' '}
+      <div className="contenedore-zoom max-w-5xl mx-auto font-sans text-[#333]  mt-20 mb-10">
+        <div className="flex justify-center items-center mx-auto mt-8  p-1">
+          <h2 className=" text-3xl font-extrabold text-[#333]  sm:text-4xl">
+            Let’s help power your SaaS
+            <br></br>
+            <br></br>
+          </h2>
+        </div>
+
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-y-8 mt-8 max-md:max-w-sm max-md:mx-auto">
+          <div className="bg-white scale-[1.05] shadow-[0_4px_60px_-4px_rgba(93,96,127,0.6)]  rounded-3xl overflow-hidden p-8">
+            <div className="text-left">
+              <h4 className="text-2xl font-extrabold">Professional</h4>
+              <p className="text-xs mt-2">Ideal for small Teams.</p>
+              <h3 className="text-2xl font-extrabold mt-4">
+                $8.00
+                <sub className="text-sm font-medium text-gray-400 ml-2">
+                  / Month
+                </sub>
+              </h3>
+              <button
+                type="button"
+                className="w-full mt-8 px-2 py-2.5 text-sm font-semibold bg-blue-600 text-white hover:bg-blue-700 rounded-full"
+              >
+                Buy Now
+              </button>
+            </div>
+            <div className="mt-8">
+              <h4 className="text-lg font-bold mb-4">Plan Included</h4>
+              <ul className="space-y-4">
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  100 Image generations
+                </li>
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  1000 Credits
+                </li>
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  Customer Support
+                </li>
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  100GB Cloud Storage
+                </li>
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  Unlimited Book Mark
+                </li>
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  Unlimited basic feature
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="bg-white scale-[1.05] shadow-[0_4px_60px_-4px_rgba(93,96,127,0.6)]  rounded-3xl overflow-hidden p-8">
+            <div className="text-left">
+              <h4 className="text-2xl font-extrabold">Professional</h4>
+              <p className="text-xs mt-2">Ideal for small Teams.</p>
+              <h3 className="text-2xl font-extrabold mt-4">
+                $8.00
+                <sub className="text-sm font-medium text-gray-400 ml-2">
+                  / Month
+                </sub>
+              </h3>
+              <button
+                type="button"
+                className="w-full mt-8 px-2 py-2.5 text-sm font-semibold bg-blue-600 text-white hover:bg-blue-700 rounded-full"
+              >
+                Buy Now
+              </button>
+            </div>
+            <div className="mt-8">
+              <h4 className="text-lg font-bold mb-4">Plan Included</h4>
+              <ul className="space-y-4">
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  100 Image generations
+                </li>
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  1000 Credits
+                </li>
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  Customer Support
+                </li>
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  100GB Cloud Storage
+                </li>
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  Unlimited Book Mark
+                </li>
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  Unlimited basic feature
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="bg-white scale-[1.05] shadow-[0_4px_60px_-4px_rgba(93,96,127,0.6)]  rounded-3xl overflow-hidden p-8">
+            <div className="text-left">
+              <h4 className="text-2xl font-extrabold">Professional</h4>
+              <p className="text-xs mt-2">Ideal for small Teams.</p>
+              <h3 className="text-2xl font-extrabold mt-4">
+                $8.00
+                <sub className="text-sm font-medium text-gray-400 ml-2">
+                  / Month
+                </sub>
+              </h3>
+              <button
+                type="button"
+                className="w-full mt-8 px-2 py-2.5 text-sm font-semibold bg-blue-600 text-white hover:bg-blue-700 rounded-full"
+              >
+                Buy Now
+              </button>
+            </div>
+            <div className="mt-8">
+              <h4 className="text-lg font-bold mb-4">Plan Included</h4>
+              <ul className="space-y-4">
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  100 Image generations
+                </li>
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  1000 Credits
+                </li>
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  Customer Support
+                </li>
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  100GB Cloud Storage
+                </li>
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  Unlimited Book Mark
+                </li>
+                <li className="flex items-center text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    className="mr-4 bg-gray-200 fill-[#333] rounded-full p-[3px]"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                      data-original="#000000"
+                    />
+                  </svg>
+                  Unlimited basic feature
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br></br>
       </div>
-      {tabItems.map((item, idx) => (
-        <Tabs.Content key={idx} className="py-6" value={item}>
-          {selectedTab === item && renderContent()}
-        </Tabs.Content>
-      ))}
-    </Tabs.Root>
+    </div>
   );
 };

@@ -1,5 +1,6 @@
 import './App.css';
 import Marcas from './Components/MacrasBanner/bannerMarcas.jsx';
+import { PrincingPriceDetail } from './Components/PlanesIndividuales/pircingPreciosDetail.jsx';
 import { Heroe } from './Components/hero.jsx';
 import { Navbar } from './Components/navBar.jsx';
 
@@ -17,6 +18,7 @@ function App() {
       <Tabsventana></Tabsventana>
 
       <Marcas></Marcas>
+      <PrincingPriceDetail></PrincingPriceDetail>
     </div>
   );
 }

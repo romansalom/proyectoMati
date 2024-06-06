@@ -4,7 +4,9 @@ export const PrincingPriceCrds = () => {
     <div className="contenedore-zoom max-w-5xl mx-auto font-sans text-[#333]  mb-10">
       <br></br>
       <div className="flex justify-center items-center mx-auto mt-8  p-1">
-        <h2 className="text-3xl font-extrabold text-[#333]   ">Planes 1</h2>
+        <h2 className=" text-3xl font-extrabold text-[#333]  sm:text-4xl">
+          Let’s help power your SaaS
+        </h2>
       </div>
       <br></br>
 
