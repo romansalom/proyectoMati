@@ -42,8 +42,8 @@ const EmailPrueba = () => {
       {isModalOpen && (
         <div className="fixed inset-0 p-4 flex justify-center items-center z-50 bg-black bg-opacity-50">
           <div
-            className="w-full max-w-lg bg-white shadow-lg rounded-md p-6 relative"
-            style={{ zoom: '70%' }}
+            className="w-full max-w-lg bg-white shadow-xl rounded-xl p-6 relative"
+            style={{ touchAction: 'manipulation', zoom: '80%' }} // Desactivar el zoom en dispositivos móviles
           >
             {!isFormSubmitted && (
               <svg
@@ -56,7 +56,7 @@ const EmailPrueba = () => {
                 <path d="M287.9 318.583a30.37 30.37 0 0 1-21.257-8.806L8.83 51.963C-2.078 39.225-.595 20.055 12.143 9.146c11.369-9.736 28.136-9.736 39.504 0l259.331 257.813c12.243 11.462 12.876 30.679 1.414 42.922-.456.487-.927.958-1.414 1.414a30.368 30.368 0 0 1-23.078 7.288z"></path>
               </svg>
             )}
-            <div className="my-8 text-center">
+            <div className=" text-center">
               {isLoading ? (
                 <div className="flex justify-center items-center">
                   <div className="loader">
