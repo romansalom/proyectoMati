@@ -1,0 +1,17 @@
+/* ImageComparisonSlider.css */
+.image-comparison-container {
+    width: 100%;
+    margin: 0 auto;
+    /* Centrar el componente */
+}
+
+@media (min-width: 1024px) {
+    .image-comparison-container {
+        max-width: 70%;
+        /* Reduce el tamaño al 70% solo en pantallas grandes */
+    }
+}
+
+.react-compare-slider {
+    width: 100%;
+}

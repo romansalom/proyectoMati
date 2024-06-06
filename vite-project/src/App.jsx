@@ -1,4 +1,5 @@
 import './App.css';
+import ImageComparisonSlider from './Components/SliderImagen/sliderImage.jsx';
 import { Heroe } from './Components/hero.jsx';
 import { Navbar } from './Components/navBar.jsx';
 
@@ -13,6 +14,7 @@ function App() {
 
       <Servicios></Servicios>
       <Tabsventana></Tabsventana>
+      <ImageComparisonSlider></ImageComparisonSlider>
     </div>
   );
 }
