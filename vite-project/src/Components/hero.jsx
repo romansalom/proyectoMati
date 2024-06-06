@@ -2,7 +2,7 @@ import ImageComparisonSlider from './SliderImagen/sliderImage';
 
 export const Heroe = () => {
   return (
-    <div className="font-sans text-[#333] max-w-6xl mx-auto mt-20 mb-0">
+    <div className="font-sans text-[#333] max-w-6xl mx-auto md:mt-20 mt-10 mb-0">
       <div className="grid md:grid-cols-2 items-center md:gap-8 gap-6">
         <div className="md:hidden">
           <div className="relative z-10">
