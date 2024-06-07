@@ -125,10 +125,7 @@ export const Servicios = () => {
 
   return (
     <section className="py-20 relative">
-      {
-        /* Fondo degradado para toda la sección */
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-blue-100 to-blue-300 opacity-50 blur-3xl"></div>
-      }
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-blue-100 to-blue-300 opacity-50 blur-3xl"></div>
 
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
         <div className="relative max-w-2xl mx-auto sm:text-center">

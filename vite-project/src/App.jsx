@@ -1,22 +1,21 @@
 import './App.css';
 import EmailPrueba from './Components/Email/emailPrueba.jsx';
 import { PrincingPriceDetail } from './Components/PlanesIndividuales/pircingPreciosDetail.jsx';
+import PirceddPrice from './Components/PlanesIndividuales/TrajetaIndividual/cardPrecio.jsx';
 import { Heroe } from './Components/hero.jsx';
-import { Navbar } from './Components/navBar.jsx';
 
 import { Servicios } from './Components/servicios.jsx';
-import { Tabsventana } from './Components/tabs.jsx';
+import PirceddPrice2 from './Components/PlanesIndividuales/Planes2/TrajetaIndividual/cardPrecio.jsx';
+import PirceddPrice3 from './Components/PlanesIndividuales/Planes3/TrajetaIndividual/cardPrecio.jsx';
 
 function App() {
   return (
-    <div className="paginaCompleta">
-      <Navbar></Navbar>
-
+    <div className="paginaCompleta ">
       <Heroe></Heroe>
-
       <Servicios></Servicios>
-      <Tabsventana></Tabsventana>
-
+      <PirceddPrice></PirceddPrice>
+      <PirceddPrice2></PirceddPrice2>
+      <PirceddPrice3></PirceddPrice3>
       <PrincingPriceDetail></PrincingPriceDetail>
       <EmailPrueba></EmailPrueba>
     </div>
