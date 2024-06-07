@@ -1,4 +1,7 @@
+import { useState } from 'react';
 export const PrincingPriceDetail = () => {
+  const [isTableVisible, setIsTableVisible] = useState(false);
+  const [visibleTables, setVisibleTables] = useState([]);
   const checkIcon = (
     <svg
       className="w-5 h-5 mx-auto text-indigo-600"
@@ -15,6 +18,22 @@ export const PrincingPriceDetail = () => {
       viewBox="0 0 20 20"
     >
       <path d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" />
+    </svg>
+  );
+  const upArrowIcon = (
+    <svg
+      className="w-4 h-4 ml-2 inline-block"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M19 15l-7-7-7 7"
+      />
     </svg>
   );
 
@@ -57,7 +76,14 @@ export const PrincingPriceDetail = () => {
       ),
       items: [
         {
-          name: '',
+          name: (
+            <span
+              onClick={() => setVisibleTables([])} // Oculta todas las tablas cuando se hace clic en la flecha hacia arriba
+              className="cursor-pointer"
+            >
+              {upArrowIcon}
+            </span>
+          ),
           starter: 'Starter',
           professional: 'Professional',
           enterprise: 'Enterprise',
@@ -131,48 +157,81 @@ export const PrincingPriceDetail = () => {
       ],
     },
   ];
+  const downArrowIcon = (
+    <svg
+      className="w-4 h-4 ml-2 inline-block"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
+  );
 
   return (
     <section className="text-gray-600">
-      <div className="">
-        <div>
-          <div className="max-w-screen-xl mx-auto space-y-4 px-4 overflow-auto md:overflow-visible md:px-8">
-            {tables.map((table, idx) => (
-              <table key={idx} className="w-full table-auto text-sm text-left">
-                <thead className="text-gray-600 font-medium border-b">
-                  <tr>
-                    <th className="z-20 top-12 py-6 lg:sticky">
-                      <div className="flex items-center gap-x-3">
-                        <h4 className="text-gray-800 text-xl font-medium">
-                          {table.label}
-                        </h4>
-                      </div>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="text-gray-600 divide-y">
-                  {table.items.map((item, idx) => (
-                    <tr key={idx}>
-                      <td className="px-6 py-4 whitespace-nowrap font-semibold text-[#333]">
-                        {item.name}
-                      </td>
-                      {/* Renderizado de los valores de los tres planes */}
-                      <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap">
-                        {item.starter}
-                      </td>
-                      <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap">
-                        {item.professional}
-                      </td>
-                      <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap">
-                        {item.enterprise}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            ))}
-          </div>
-          {/* Eliminamos el selector de planes */}
+      <div className="max-w-screen-xl mx-auto space-y-4 px-4 md:px-8">
+        <div className="text-center">
+          {/* Botón de abrir tabla centrado */}
+          {!visibleTables.length ? (
+            <button
+              className="text-blue-600 hover:text-blue-700 text-xl flex items-center justify-center mx-auto"
+              onClick={() => setVisibleTables([true])} // Muestra la tabla al hacer clic
+            >
+              Compare Los Planes
+              {downArrowIcon}
+            </button>
+          ) : (
+            <div className="overflow-auto md:overflow-visible">
+              {tables.map(
+                (table, idx) =>
+                  visibleTables[idx] && ( // Solo muestra la tabla si su índice está en el estado visible
+                    <table
+                      key={idx}
+                      className="w-full table-auto text-sm text-left"
+                    >
+                      <thead className="text-gray-600 font-medium border-b">
+                        <tr>
+                          <th className="py-6">
+                            <div className="flex items-center justify-between gap-x-3">
+                              <h4 className="text-gray-800 text-xl font-medium flex-1">
+                                {table.label}
+                              </h4>
+                              {/* Flecha hacia arriba fija para cerrar la tabla */}
+                            </div>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="text-gray-600 divide-y">
+                        {table.items.map((item, idx) => (
+                          <tr key={idx}>
+                            <td className="px-6 py-4 whitespace-nowrap font-semibold text-[#333]">
+                              {item.name}
+                            </td>
+                            {/* Renderizado de los valores de los tres planes */}
+                            <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap">
+                              {item.starter}
+                            </td>
+                            <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap">
+                              {item.professional}
+                            </td>
+                            <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap">
+                              {item.enterprise}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  )
+              )}
+            </div>
+          )}
         </div>
       </div>
       <hr />

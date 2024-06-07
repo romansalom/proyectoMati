@@ -73,6 +73,10 @@
 
 }
 
+.paginaCompleta {
+  zoom: 90%;
+  /* Valor por defecto para pantallas grandes */
+}
 
 .contenedore-zoom {
   zoom: 85%;
