@@ -6,15 +6,15 @@ const PirceddPrice2 = () => {
       <div className="container mx-auto px-6 py-20 md:px-12 lg:px-20 ">
         <div className="text-center lg:w-8/12 xl:w-7/12 mx-auto "></div>
 
-        <div className=" mt-20 flex flex-col md:flex-row items-center justify-center md:space-x-4 xl:w-10/12 mx-auto  ">
-          <div className="relative z-10 group md:w-6/12 lg:w-5/12 mb-8 md:mb-0 md:mx-0">
+        <div className="  flex flex-col md:flex-row items-center justify-center md:space-x-4 xl:w-10/12 mx-auto  ">
+          <div className="relative  z-10 group md:w-6/12 lg:w-5/12 mb-8  border border-gray-50 rounded-xl  md:mb-0 md:mx-0">
             <div
               aria-hidden="true"
-              className="absolute top-0 w-full h-full rounded-2xl bg-white shadow-xl transition-transform duration-500 transform group-hover:scale-105 lg:group-hover:scale-110"
+              className=" absolute top-0 w-full h-full rounded-2xl bg-white shadow-xl transition-transform duration-500 transform group-hover:scale-105 lg:group-hover:scale-110"
             ></div>
-            <div className="relative p-6 space-y-6 lg:p-8">
+            <div className="relative p-6 space-y-6 lg:p-8 ">
               <h3 className="text-3xl text-gray-700 font-semibold text-center">
-                Plan 1
+                Plan 2
               </h3>
               <div className="flex justify-around">
                 <div className="flex items-end">
@@ -77,7 +77,7 @@ const PirceddPrice2 = () => {
               </button>
             </div>
           </div>
-          <div className="hidden md:block relative p-6 pt-16 md:p-8 md:pl-12 md:rounded-xl lg:pl-20 lg:p-16 border-2 border-gray-50 rounded-lg shadow-xl">
+          <div className=" hidden md:block relative p-6 pt-16 md:p-8 md:pl-12 md:rounded-xl lg:pl-20 lg:p-16 border-2 border-gray-50 rounded-lg shadow-xl">
             <ul role="list" className="space-y-4 py-4 text-gray-600">
               <li className="flex items-center space-x-2">
                 <span className="text-blue-600 font-semibold">&check;</span>
