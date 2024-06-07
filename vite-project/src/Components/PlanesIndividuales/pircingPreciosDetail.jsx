@@ -1,6 +1,5 @@
 import { useState } from 'react';
 export const PrincingPriceDetail = () => {
-  const [isTableVisible, setIsTableVisible] = useState(false);
   const [visibleTables, setVisibleTables] = useState([]);
   const checkIcon = (
     <svg
@@ -181,10 +180,11 @@ export const PrincingPriceDetail = () => {
           {/* Botón de abrir tabla centrado */}
           {!visibleTables.length ? (
             <button
-              className="text-blue-600 hover:text-blue-700 text-xl flex items-center justify-center mx-auto"
+              className="text-blue-600 hover:text-blue-700 flex items-center justify-center mx-auto"
+              style={{ fontSize: '17px' }} // Aquí puedes ajustar el tamaño a tu gusto
               onClick={() => setVisibleTables([true])} // Muestra la tabla al hacer clic
             >
-              Compare Los Planes
+              Desglose de Planes
               {downArrowIcon}
             </button>
           ) : (
