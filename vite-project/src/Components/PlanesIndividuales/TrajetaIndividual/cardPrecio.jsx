@@ -1,137 +1,126 @@
+import { useState } from 'react';
+import '../../heroe.css';
 import './styles.css';
 
 const PirceddPrice = () => {
+  const [activeTab, setActiveTab] = useState('description'); // Estado para controlar la pestaña activa
+
+  // Función para cambiar la pestaña activa
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
+
   return (
-    <div className="  contenedore-zoom   ">
-      <div className="container mx-auto px-6 py-20 md:px-12 lg:px-20 ">
-        <div className="text-center lg:w-8/12 xl:w-7/12 mx-auto ">
-          {' '}
-          <h2 className="text-2xl text-Black-900 font-sans text-[#333]  font-extrabold md:text-4xl">
-            Planes
-          </h2>
-          <br></br>
+    <div className="contenedore-zoomes">
+      {' '}
+      <section className="text-gray-600 body-font overflow-hidden">
+        <div className="relative z-10">
+          <h3 className="playfair-display-letras text-3xl font-extrabold text-[#333] sm:text-4xl mt-10">
+            Nuestras Lineas{' '}
+          </h3>
         </div>
 
-        <div className="  flex flex-col md:flex-row items-center justify-center md:space-x-4 xl:w-10/12 mx-auto  ">
-          <div className="relative  z-10 group md:w-6/12 lg:w-5/12 mb-8  border border-gray-50 rounded-xl  md:mb-0 md:mx-0">
-            <div
-              aria-hidden="true"
-              className=" absolute top-0 w-full h-full rounded-2xl bg-white shadow-xl transition-transform duration-500 transform group-hover:scale-105 lg:group-hover:scale-110"
-            ></div>
-            <div className="relative p-6 space-y-6 lg:p-8 ">
-              <h3 className="text-3xl text-gray-700 font-semibold text-center">
-                Plan 2
-              </h3>
-              <div className="flex justify-around">
-                <div className="flex items-end">
-                  <span className="text-8xl text-gray-800 font-bold leading-none">
-                    35
-                  </span>
-                  <div className="pb-2">
-                    <span className="block text-2xl text-gray-700 font-bold">
-                      %
-                    </span>
-                    <span className="block text-xl text-blue-600 font-bold">
-                      Off
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <ul
-                role="list"
-                className="w-max space-y-4 py-6 mx-auto text-gray-600"
-              >
-                <li className="flex items-center space-x-2">
-                  <span className="text-blue-600 font-semibold">&check;</span>
-                  <span>First premium advantage</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="text-blue-600 font-semibold">&check;</span>
-                  <span>Second advantage weekly</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <span className="text-blue-600 font-semibold">&check;</span>
-                  <span>Third advantage donate to project</span>
-                </li>
-              </ul>
-              <p className="flex items-center justify-center space-x-4 text-lg text-gray-600 text-center">
-                <span>Call us at</span>
+        <div className="container px-5 py-20 mx-auto">
+          <div className="lg:w-4/5 mx-auto flex flex-wrap">
+            <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+              <h2 className="playfair-display-letras text-sm title-font text-gray-500 tracking-widest">
+                Linea{' '}
+              </h2>
+              <h1 className="playfair-display-letras text-gray-900 text-3xl title-font font-medium mb-4">
+                Airbnb Standard{' '}
+              </h1>
+
+              <div className="flex mb-4">
                 <a
-                  href="tel:+24300"
-                  className="flex space-x-2 items-center text-blue-600"
+                  className={`playfair-display-letras flex-grow ${
+                    activeTab === 'description'
+                      ? 'text-indigo-500 border-b-2 border-indigo-500 py-2 text-lg px-1'
+                      : 'border-b-2 border-gray-300 py-2 text-lg px-1'
+                  }`}
+                  onClick={() => handleTabClick('description')}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    className="w-6"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                  </svg>
-                  <span className="font-semibold">+1 000 000</span>
+                  Description
                 </a>
-                <span>or</span>
-              </p>
-              <button
-                type="submit"
-                title="Submit"
-                className="block w-full py-3 px-6 text-center rounded-xl transition bg-blue-600 hover:bg-blue-800 active:bg-blue-800 focus:bg-indigo-600"
-              >
-                <span className="text-white font-semibold">
-                  Send us an email
+                <a
+                  className={`playfair-display-letras flex-grow ${
+                    activeTab === 'reviews'
+                      ? 'text-indigo-500 border-b-2 border-indigo-500 py-2 text-lg px-1'
+                      : 'border-b-2 border-gray-300 py-2 text-lg px-1'
+                  }`}
+                  onClick={() => handleTabClick('reviews')}
+                >
+                  Reviews
+                </a>
+                <a
+                  className={`playfair-display-letras flex-grow ${
+                    activeTab === 'details'
+                      ? 'text-indigo-500 border-b-2 border-indigo-500 py-2 text-lg px-1'
+                      : 'border-b-2 border-gray-300 py-2 text-lg px-1'
+                  }`}
+                  onClick={() => handleTabClick('details')}
+                >
+                  Details
+                </a>
+              </div>
+              {activeTab === 'description' && (
+                <p className="playfair-display-letras leading-relaxed mb-4">
+                  La linea Airbnb Standard contiene un diseño bueno bonito
+                  barato para empezar hacer rendir tu departamento
+                </p>
+              )}
+              {activeTab === 'reviews' && (
+                <div className="playfair-display-letras flex border-t border-gray-200 py-2">
+                  <span className="text-gray-500">Reviews Content</span>
+                  {/* Aquí puedes colocar el contenido específico para Reviews */}
+                </div>
+              )}
+              {activeTab === 'details' && (
+                <div className="playfair-display-letras flex border-t border-gray-200 py-2">
+                  <span className="text-gray-500">Details Content</span>
+                  {/* Aquí puedes colocar el contenido específico para Details */}
+                </div>
+              )}
+              <div className="playfair-display-letras flex border-t border-gray-200 py-2">
+                <span className="text-gray-500">Color</span>
+                <span className="ml-auto text-gray-900">Blue</span>
+              </div>
+              <div className="playfair-display-letras flex border-t border-gray-200 py-2">
+                <span className="text-gray-500">Size</span>
+                <span className="ml-auto text-gray-900">Medium</span>
+              </div>
+              <div className="playfair-display-letras flex border-t border-b mb-6 border-gray-200 py-2">
+                <span className="text-gray-500">Quantity</span>
+                <span className="ml-auto text-gray-900">4</span>
+              </div>
+              <div className="playfair-display-letras flex">
+                <span className="title-font font-medium text-2xl text-gray-900">
+                  $58.00
                 </span>
-              </button>
+                <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+                  Button
+                </button>
+                <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                  <svg
+                    fill="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    className="w-5 h-5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-          <div className=" hidden md:block relative p-6 pt-16 md:p-8 md:pl-12 md:rounded-xl lg:pl-20 lg:p-16 border-2 border-gray-50 rounded-lg shadow-xl">
-            <ul role="list" className="space-y-4 py-4 text-gray-600">
-              <li className="flex items-center space-x-2">
-                <span className="text-blue-600 font-semibold">&check;</span>
-                <span>First premium advantage</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="text-blue-600 font-semibold">&check;</span>
-                <span>Second advantage weekly</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="text-blue-600 font-semibold">&check;</span>
-                <span>Third advantage donate to project</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="text-blue-600 font-semibold">&check;</span>
-                <span>Fourth, access to all components weekly</span>
-              </li>
-            </ul>
-
-            <div className="mt-6 flex justify-center gap-6">
-              <img
-                className="w-16 lg:w-24"
-                src="https://tailus.io/sources/blocks/organization/preview/images/clients/airbnb.svg"
-                loading="lazy"
-                alt="airbnb"
-              />
-              <img
-                className="w-8 lg:w-16"
-                src="https://tailus.io/sources/blocks/organization/preview/images/clients/bissell.svg"
-                loading="lazy"
-                alt="bissell"
-              />
-              <img
-                className="w-6 lg:w-12"
-                src="https://tailus.io/sources/blocks/organization/preview/images/clients/ge.svg"
-                loading="lazy"
-                alt="ge"
-              />
-              <img
-                className="w-20 lg:w-28"
-                src="https://tailus.io/sources/blocks/organization/preview/images/clients/microsoft.svg"
-                loading="lazy"
-                alt="microsoft"
-              />
-            </div>
+            <img
+              alt="ecommerce"
+              className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
+              src="https://dummyimage.com/400x400"
+            />
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
