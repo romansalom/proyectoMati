@@ -7,10 +7,16 @@ import { Heroe } from './Components/hero.jsx';
 import { Servicios } from './Components/servicios.jsx';
 import PirceddPrice2 from './Components/PlanesIndividuales/Planes2/TrajetaIndividual/cardPrecio.jsx';
 import PirceddPrice3 from './Components/PlanesIndividuales/Planes3/TrajetaIndividual/cardPrecio.jsx';
+import { Navbar } from './Components/navBar.jsx';
 
 function App() {
   return (
     <div className="paginaCompleta ">
+      <div className="relative z-10">
+        {' '}
+        <Navbar></Navbar>
+      </div>
+
       <Heroe></Heroe>
       <Servicios></Servicios>
       <PirceddPrice></PirceddPrice>

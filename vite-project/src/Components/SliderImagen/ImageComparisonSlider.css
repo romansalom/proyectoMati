@@ -7,7 +7,7 @@
 
 @media (min-width: 1024px) {
     .image-comparison-container {
-        max-width: 70%;
+        max-width: 80%;
         /* Reduce el tamaño al 70% solo en pantallas grandes */
     }
 }
@@ -17,7 +17,7 @@
     /* Bordes redondos */
     overflow: hidden;
     /* Oculta el contenido que sobresale del contenedor */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(158, 4, 4, 0.3);
     /* Sombra 3D */
 }
 

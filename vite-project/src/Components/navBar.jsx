@@ -10,17 +10,13 @@ export const Navbar = () => {
     { title: 'Customers', path: 'javascript:void(0)' },
     { title: 'Pricing', path: 'javascript:void(0)' },
   ];
+
   return (
-    <nav className="bg-white border-b w-full md:static md:text-sm md:border-none">
+    <nav className="border-b w-full md:static md:text-sm md:border-none">
       <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
-        <div className="flex items-center justify-between py-3 md:py-5 md:block">
+        <div className="flex items-center justify-between py-1 md:py-2 md:block">
           <a href="javascript:void(0)">
-            <img
-              src="https://www.floatui.com/logo.svg"
-              width={120}
-              height={50}
-              alt="Float UI logo"
-            />
+            <img src="logokts.png" width={90} height={50} alt="Float UI logo" />
           </a>
           <div className="md:hidden">
             <button
@@ -75,24 +71,6 @@ export const Navbar = () => {
               );
             })}
             <span className="hidden w-px h-6 bg-gray-300 md:block"></span>
-            <div className="space-y-3 items-center gap-x-6 md:flex md:space-y-0">
-              <li>
-                <a
-                  href="javascript:void(0)"
-                  className="block py-3 text-center text-gray-700 hover:text-indigo-600 border rounded-lg md:border-none"
-                >
-                  Log in
-                </a>
-              </li>
-              <li>
-                <a
-                  href="javascript:void(0)"
-                  className="block py-3 px-4 font-medium text-center text-white bg-blue-600 hover:bg-blue-500 active:bg-blue-700 active:shadow-none rounded-lg shadow md:inline"
-                >
-                  Sign in
-                </a>
-              </li>
-            </div>
           </ul>
         </div>
       </div>

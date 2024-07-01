@@ -44,10 +44,6 @@
   color: #888;
 }
 
-.contenedores-zoom {
-  zoom: 80%;
-  /* Valor por defecto para pantallas grandes */
-}
 
 .contenedores-zoom td {
   font-size: 130%;
@@ -56,34 +52,13 @@
 
 /* Media query para pantallas más pequeñas */
 @media screen and (max-width: 768px) {
-  .contenedores-zoom {
-    zoom: 55%;
-    /* Cambiar el zoom para pantallas más pequeñas */
-  }
+
 
   .contenedores-zoom td {
     font-size: 60%;
     /* Aumenta el tamaño de fuente en un 20% */
   }
 
-  .contenedores-zoom th h3 {
-    font-size: 100%;
-    /* Aumenta el tamaño de fuente en un 20% */
-  }
 
-}
 
-.paginaCompleta {
-  zoom: 85%;
-  /* Valor por defecto para pantallas grandes */
-}
-
-.contenedore-zoom {
-  zoom: 85%;
-  /* o transform: scale(0.8); */
-}
-
-.contenedoresh-zoom {
-  zoom: 85%;
-  /* o transform: scale(0.8); */
 }
