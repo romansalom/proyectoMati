@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['aos'], // Indica a Vite que 'aos' es un módulo externo
+      external: ['aos', '@emailjs/browser'], // Indica a Vite que estos son módulos externos
     },
   },
 });
