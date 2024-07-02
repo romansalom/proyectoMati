@@ -18,7 +18,7 @@ export const Servicios = () => {
         <div className="relative max-w-2xl mx-auto sm:text-center">
           <div className="relative z-10" data-aos="fade-up">
             <h3 className="playfair-display-letras text-3xl font-extrabold text-[#333] sm:text-4xl">
-              Sobre Nosotros
+              Sobre Nosotrosssssss
             </h3>
           </div>
         </div>
@@ -50,11 +50,6 @@ export const Servicios = () => {
               data-aos-delay="200"
             >
               <span className="absolute left-0 top-3 transform -translate-y-1/2 w-2 h-2 bg-blue-500 rounded-full"></span>
-              <span className="playfair-display-letras ml-6 block">
-                Mejoramos la experiencia de compra de nuestros consumidores.
-                Quien nos elige recibe un paquete completo con todo lo necesario
-                para mudarse directo con su valija o listo para ser alquilado.
-              </span>
             </p>
           </div>
           <div
